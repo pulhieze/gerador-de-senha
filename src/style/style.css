@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    --color-primary-1: rgb(41, 41, 41);
+    --color-primary-2: #ff7300;
+    --color-primary-2-dark: #b45100;
+    --color-primary-3: #161616;
+
+    --color-neutral: black;
+    --color-neutral-2: white;
+}
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SUSE Mono', monospace;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-3);
+    min-height: 100vh;
+    color: var(--color-neutral-2);
+}
+
+/* Container geral */
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Cabeçalho (cadeado + título) */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#img-id{
+    width: 80px;
+}
+
+#title{
+    color: var(--color-primary-2);
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Caixa da senha */
+#password-container{
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary-1);
+    color: var(--color-primary-2);
+    border-radius: 6px;
+    padding: 8px 12px;
+}
+
+#password{
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Botão de copiar */
+#copy{
+    background-color: transparent;
+    border: none;
+    color: var(--color-primary-2);
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+#copy:hover{
+    color: var(--color-primary-2-dark);
+}
+
+/* Área de opções */
+#password-itms{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 400px;
+    background: var(--color-primary-1);
+    padding: 12px;
+    border-radius: 6px;
+}
+
+/* Itens individuais */
+.item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-primary-2);
+    font-size: 14px;
+}
+
+.item input[type="checkbox"],
+.item input[type="number"] {
+    accent-color: var(--color-primary-2);
+    cursor: pointer;
+}
+
+/* Campo número */
+.item input[type="number"] {
+    width: 60px;
+    padding: 4px;
+    border: 2px solid var(--color-neutral-1);
+    border-radius: 4px;
+    background: var(--color-primary-3);
+    color: var(--color-neutral-2);
+    outline: none;
+}
+
+.item input[type="number"]:focus {
+    border-color: var(--color-primary-2-dark);
+}
+
+#generate{
+    color: #ff7300;
+    background-color: var(--color-primary-1);
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    transition: color 0.3s ease;
+}
+
+#generate:hover{
+    color: var(--color-primary-2-dark);
+    background-color: #141414;
+}
+
+#delete{
+    color: #ff7300;
+    background-color: var(--color-primary-1);
+    margin-top: 6px;
+    border-radius: 6px;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    transition: color 0.3s ease;
+}
+
+#delete:hover{
+    color: var(--color-primary-2-dark);
+    background-color: #141414;
+}
